@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        load('src/test_func_1.groovy')
+        load('src/test_src.groovy')
       }
     }
     
