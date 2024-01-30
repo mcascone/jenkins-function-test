@@ -1,17 +1,14 @@
+// define the script var outside the pipeline, so it is in global scope
+def testScript
+
 pipeline {
   agent any
   
   stages {
-    // stage('Build') {
-    //   steps {
-    //     checkout scm
-    //   }
-    // }
-    
     stage('Test') {
       steps {
           script {
-            def testScript = load('src/test_src.groovy')
+            testScript = load('src/test_src.groovy')
           }
       }
     }
