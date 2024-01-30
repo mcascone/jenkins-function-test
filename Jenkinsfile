@@ -4,16 +4,16 @@ pipeline {
   stages {
     // stage('Build') {
     //   steps {
-        // load('src/test_src.groovy')
-        // test_src('max')
-        // this doesn't work
+    //     checkout scm
     //   }
     // }
     
     stage('Test') {
       steps {
-        load('src/test_src.groovy')
-        test_src('max')
+          script {
+            def testScript = load('src/test_src.groovy')
+            testScript.test_source('max')
+          }
       }
     }
     
