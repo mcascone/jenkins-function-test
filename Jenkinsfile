@@ -11,15 +11,17 @@ pipeline {
     stage('Test') {
       steps {
           script {
-            def testScript = load('src/test_src.groovy').test_source('max')
+            def testScript = load('src/test_src.groovy')
           }
       }
     }
     
-    // stage('Deploy') {
-    //   steps {
-    //     // TODO: Add deployment steps here
-    //   }
-    // }
+    stage('Deploy') {
+      steps {
+        script {
+          testScript.test_source('max')
+        }
+      }
+    }
   }
 }
