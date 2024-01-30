@@ -17,6 +17,7 @@ pipeline {
       steps {
         script {
           testScript.test_source('max')
+          testScript()
         }
       }
     }
