@@ -22,7 +22,7 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('inside') {
       steps {
         script {
           testScript()
