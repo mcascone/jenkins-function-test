@@ -12,7 +12,7 @@ pipeline {
     
     stage('Test') {
       steps {
-        load('vars/test_src.groovy')
+        load('src/test_src.groovy')
         test_src('max')
       }
     }
