@@ -1,3 +1,3 @@
-def call(String test) {
+def test_source(String test) {
   echo $test
 }
