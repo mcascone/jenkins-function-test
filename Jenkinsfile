@@ -21,5 +21,13 @@ pipeline {
         }
       }
     }
+
+    stage('Deploy') {
+      steps {
+        script {
+          testScript()
+        }
+      }
+    }
   }
 }
