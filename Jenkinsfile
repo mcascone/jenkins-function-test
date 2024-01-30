@@ -2,18 +2,20 @@ pipeline {
   agent any
   
   stages {
-    stage('Build') {
+    // stage('Build') {
+    //   steps {
+        // load('src/test_src.groovy')
+        // test_src('max')
+        // this doesn't work
+    //   }
+    // }
+    
+    stage('Test') {
       steps {
-        load('src/test_src.groovy')
+        load('vars/test_src.groovy')
         test_src('max')
       }
     }
-    
-    // stage('Test') {
-    //   steps {
-    //     // TODO: Add test steps here
-    //   }
-    // }
     
     // stage('Deploy') {
     //   steps {
